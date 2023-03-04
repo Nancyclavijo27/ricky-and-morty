@@ -1,7 +1,7 @@
 import React from "react";
-import Gender from "./FilterOne.jsx/Gender";
-import Species from "./FilterOne.jsx/Species";
-import Status from "./FilterOne.jsx/Status";
+import Gender from "./FilterOne/Gender";
+import Species from "./FilterOne/Species";
+import Status from "./FilterOne/Status";
 
 const Filter = ({
   pageNumber,
