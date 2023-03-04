@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import styles from "./Card.modulo.scss";
-import CardDetails from "./CardDetails";
+//import CardDetails from "./CardDetails";
 
 
 
