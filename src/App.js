@@ -1,13 +1,10 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
-
-import Navbar from "./componentes/Navbar/Narbar";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./componentes/Navbar/Narbar";
 import Episodes from "./Pages/Episodes";
 import Location from "./Pages/Location";
 import CardDetails from "./componentes/Card/CardDetails";
 import Home from "./componentes/Home/Home"
+
 
 function App() {
   
