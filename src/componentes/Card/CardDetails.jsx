@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { Favorites } from "../Favorites/Favorites";
 
 const CardDetails = () => {
   let { id } = useParams();
 
   let [fetchedData, updateFetchedData] = useState([]);
-  let { name, location, origin, gender, image, status, species } = fetchedData;
+  let { name, location, origin, gender, image,  species } = fetchedData;
+  
 
   let api = `https://rickandmortyapi.com/api/character/${id}`;
 
@@ -16,21 +18,13 @@ const CardDetails = () => {
     })();
   }, [api]);
 
+ 
   return (
-    <div className="container d-flex justify-content-center mb-5">
+    <div className="container d-flex justify-content-center mb-5 bg-info">
       <div className="d-flex flex-column gap-3">
         <h1 className="text-center">{name}</h1>
 
         <img className="img-flui" src={image} alt="" />
-        {(() => {
-          if (status === "Dead") {
-            return <div className="badge bg-danger fs-5">{status}</div>;
-          } else if (status === "Alive") {
-            return <div className=" badge bg-success fs-5">{status}</div>;
-          } else {
-            return <div className="badge bg-secondary fs-5">{status}</div>;
-          }
-        })()}
         <div className="content">
           <div className="">
             <span className="fw-bold">Gender : </span>
@@ -49,6 +43,8 @@ const CardDetails = () => {
             {species}
           </div>
         </div>
+           <Favorites/>
+           <Link className="link btn btn-primary fs-5"  to="/">Home</Link>
       </div>
     </div>
   );

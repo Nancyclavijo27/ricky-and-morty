@@ -47,7 +47,7 @@ const Navbar = () => {
           <div className="navbar-nav fs-5">
          
             <NavLink to="/" className="nav-link">
-              Characters
+              Home
             </NavLink>
             <NavLink to="/episodes" className="nav-link">
               Episode

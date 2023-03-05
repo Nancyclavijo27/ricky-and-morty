@@ -4,12 +4,13 @@ import styles from "./Card.modulo.scss";
 
 
 const Card = ({ page, results }) => {
+ 
   let display;
 
   if (results) {
     display = results.map((x) => {
       let { id, image, name,  location } = x;
-
+     
       return (
         <Link
           style={{ textDecoration: "none" }}
@@ -29,6 +30,7 @@ const Card = ({ page, results }) => {
               </div>
             </div>
           </div>
+          
         </Link>
       );
     });
