@@ -4,7 +4,7 @@ import Species from "./FilterOne/Species";
 import Status from "./FilterOne/Status";
 
 const Filter = ({
-  pageNumber,
+  
   updatePageNumber,
   updateStatus,
   updateGender,

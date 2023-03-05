@@ -10,8 +10,6 @@ import Filter from "../Filter/Filter";
 
 function Home() {
 
-
-
     let [fetchedData, updateFetchedData] = useState([]);
     let { info, results } = fetchedData;
     let [pageNumber, updatePageNumber] = useState(1);
@@ -30,8 +28,8 @@ function Home() {
     }, [api]);
 
     return (
-        <div className="App">
-            <h1 className="text-center mb-3">Characters</h1>
+        <div className="container  bg-info">
+            <h1 className="text-center mb-3">Ricki and Morty </h1>
             <Search setSearch={setSearch} updatePageNumber={updatePageNumber} />
             <Pagination
                 info={info}

@@ -21,7 +21,7 @@ const CardDetails = () => {
       <div className="d-flex flex-column gap-3">
         <h1 className="text-center">{name}</h1>
 
-        <img className="img-fluid" src={image} alt="" />
+        <img className="img-flui" src={image} alt="" />
         {(() => {
           if (status === "Dead") {
             return <div className="badge bg-danger fs-5">{status}</div>;

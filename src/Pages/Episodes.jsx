@@ -25,7 +25,7 @@ const Episodes = () => {
   }, [api]);
 
   return (
-    <div className="container">
+    <div className="container bg-info">
       <div className="row mb-3">
         <h1 className="text-center mb-3">
           Episode name :{" "}

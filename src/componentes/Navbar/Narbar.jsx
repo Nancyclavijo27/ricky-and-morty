@@ -1,12 +1,25 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink,  } from "react-router-dom";
 import "../../App.scss";
+import { LoginButton } from "../Login/Logins";
+import { useAuth0 } from "@auth0/auth0-react";
+import { LogoutButton } from "../Login/Logout";
+import { Profile } from "../Login/Profile";
+
 
 const Navbar = () => {
+  const { isAuthenticated } = useAuth0();
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <nav className="navbar navbar-expand-lg navbar-light  mb-4 bg-warning ">
       <div className="container">
-       
+      {isAuthenticated ? (
+          <>
+            <Profile />
+            <LogoutButton/>
+          </>
+        ) : (
+          <LoginButton />
+        )}
         <style jsx>{`
           button[aria-expanded="false"] > .close {
             display: none;
@@ -32,6 +45,7 @@ const Navbar = () => {
           id="navbarNavAltMarkup"
         >
           <div className="navbar-nav fs-5">
+         
             <NavLink to="/" className="nav-link">
               Characters
             </NavLink>
@@ -45,6 +59,7 @@ const Navbar = () => {
             >
               Location
             </NavLink>
+           
           </div>
         </div>
       </div>

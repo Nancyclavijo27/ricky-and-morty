@@ -8,7 +8,7 @@ const Card = ({ page, results }) => {
 
   if (results) {
     display = results.map((x) => {
-      let { id, image, name, status, location } = x;
+      let { id, image, name,  location } = x;
 
       return (
         <Link
@@ -29,34 +29,6 @@ const Card = ({ page, results }) => {
               </div>
             </div>
           </div>
-
-          {(() => {
-            if (status === "Dead") {
-              return (
-                <div
-                  className={`${styles.badge} position-absolute badge bg-danger`}
-                >
-                  {status}
-                </div>
-              );
-            } else if (status === "Alive") {
-              return (
-                <div
-                  className={`${styles.badge} position-absolute badge bg-success`}
-                >
-                  {status}
-                </div>
-              );
-            } else {
-              return (
-                <div
-                  className={`${styles.badge} position-absolute badge bg-secondary`}
-                >
-                  {status}
-                </div>
-              );
-            }
-          })()}
         </Link>
       );
     });

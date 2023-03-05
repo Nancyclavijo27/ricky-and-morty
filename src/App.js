@@ -6,6 +6,7 @@ import CardDetails from "./componentes/Card/CardDetails";
 import Home from "./componentes/Home/Home"
 
 
+
 function App() {
   
   return (
@@ -23,6 +24,7 @@ function App() {
 
         <Route path="/location" element={<Location />} />
         <Route path="/location/:id" element={<CardDetails />} />
+
       </Routes>
     </Router>
   );
